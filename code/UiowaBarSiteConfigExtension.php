@@ -37,10 +37,3 @@ class UiowaBarSiteConfigExtension extends DataExtension {
 	}
 
 }
-class SiteConfigExtensionPage_Controller extends Page_Controller {
-
-	public function init() {
-		parent::init();
-	}
-
-}
