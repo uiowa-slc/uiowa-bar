@@ -1,5 +1,34 @@
-.division-bar__link {
-  color: $black;
+$black: #000;
+$yellow: #FFCD00;
+
+.uiowa-bar__sr-only{
+  clip: rect(1px, 1px, 1px, 1px); 
+   height: 1px; 
+   width: 1px; 
+   overflow: hidden; 
+   position: absolute !important;
+}
+
+.uiowa-bar{
+  margin: 0 auto;
+  font-size: 11px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  height: 41px;  
+}
+
+.uiowa-bar__wrapper{
+  background-color: #000;
+}
+
+.uiowa-bar__link {
+  color: #999999;
+  font-size: 1.2em;
+  margin: 10px 5px;
+  vertical-align: middle;
   position: relative;
   &:after {
     content: "";
@@ -19,7 +48,7 @@
     visibility: hidden;
   }
   &:hover, &:focus {
-    color: $black;
+  
   }
   &:hover:after, &:focus:after {
     opacity: 1;
@@ -28,91 +57,122 @@
   }
 }
 
-
-/* Begin Uiowa division bar css */
-#ui-wrapper {
-  background-color: #000;
-}
-#uiowa-bar {
-  margin: 0 auto;
-  font-size: 11px;
-  font-family: sans-serif;
-  box-sizing: border-box;
-  padding: 6px 10px 2px;
-  width: 100%;
-  position: relative;
-  height: 41px;
-}
-
-.uiowalogo {
+.uiowa-bar__wordmark {
   width: auto;
   height: 24px;
   fill: $yellow;
 }
-.uiowalogo--dark-header {
+
+.uiowa-bar__logo--dark-header {
   fill: $yellow;
 }
-.uiowalogo--light-header {
+.uiowa-bar__logo--light-header {
   fill: #000;
 }
-.uiowalogo--overlay {
+.uiowa-bar__logo--overlay {
   fill: $yellow;
 }
 
-#uiowa-bar #wordmark-link {
+.uiowa-bar__wordmark-link {
   display: block;
   position: absolute;
   top: 6px;
   left: 25px;
 }
 
-#uiowa-bar #uiowa-search {
+.uiowa-bar__search-form{
+  margin-bottom: 0;
+  margin-top: 0;
+  display: block;
+  text-align: center;
+  @media(min-width: 600px) {
+    display: inline;
+  }
+}
+
+.uiowa-bar__form-container{
+  display: block;
+  margin-bottom: 0;
+  margin-top: 0;
+  @media(min-width: 600px) {
+    display: inline;
+  }
+}
+
+
+
+
+.uiowa-bar__search {
   margin-top: 3px;
   position: absolute;
   top: 6px;
   right: 25px;
 }
 
-#uiowa-bar #uiowa-search div,
-#uiowa-bar #uiowa-search ul,
-#uiowa-bar #uiowa-search li,
-#uiowa-bar #uiowa-search form {
+
+.uiowa-bar__menu-item{
   display: inline;
   text-align: center;
   margin: 0 auto;
+  line-height: 24px;
 }
-#uiowa-bar #uiowa-search .links {
+.uiowa-bar__links {
   display: inline;
 }
 
-#uiowa-bar #uiowa-search .links a {
-  color: #999999;
-  font-size: 1.2em;
-  margin: 0 5px;
-  vertical-align: middle;
-}
-#uiowa-bar #uiowa-search .links--overlay a {
+.uiowa-bar__links--overlay a {
   color: #fff;
 }
+
+
+
+input[type="text"].uiowa-bar__search-input{
+  border-radius: 0;
+  height: auto;
+  padding: 4px;
+  border-width: 0px;
+  font-size: 1.1em;
+  background-color: #222;
+  display: inline;
+  width: 120px;
+  color: #FFF;
+}
+
+input[type="submit"].uiowa-bar__submit{
+  border: none;
+  line-height: normal;
+  margin-left: -3px;
+  padding: 4px 10px;
+  font-size: 1.1em;
+  font-weight: normal;
+  vertical-align: top;
+  background-color: #999999;
+  border-radius: 0;
+  color: #000;
+  display: inline-block;
+}
+
+
+
 @media(max-width: 600px) {
-  #uiowa-bar{
+  .uiowa-bar{
    height: inherit;
   }
-  #uiowa-bar #wordmark-link {
+  .uiowa-bar__wordmark-link {
    display: block;
    text-align: center;
    position: static;
    margin-bottom: 10px;
   }
 
-  #uiowa-bar #uiowa-search {
+  .uiowa-bar__search {
    margin-top: 3px;
    position: static;
   }
 }
 
 @media(max-width: 600px) {
-  #uiowa-bar #uiowa-search .links {
+  .uiowa-bar__links {
    display: none;
   }
 }

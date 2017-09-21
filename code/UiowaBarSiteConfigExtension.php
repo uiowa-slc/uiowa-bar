@@ -8,7 +8,8 @@ class UiowaBarSiteConfigExtension extends DataExtension {
 		'QuickLinkTitleThree' => 'Text',
 		'QuickLinkURLOne' => 'Text',
 		'QuickLinkURLTwo' => 'Text',
-		'QuickLinkURLThree' => 'Text'
+		'QuickLinkURLThree' => 'Text',
+		'EnableSearch' => 'Boolean'
 	);
 
 	private static $has_one = array(
@@ -32,6 +33,7 @@ class UiowaBarSiteConfigExtension extends DataExtension {
 		$fields->addFieldToTab('Root.Main', new TextField('QuickLinkTitleThree', 'Quick Link Title'));
 		$fields->addFieldToTab('Root.Main', new TextField('QuickLinkURLThree', 'Quick Link URL'));
 
+		$fields->addFieldToTab('Root.Main', new TextField('EnableSearch', 'Enable search?'));
 
 		return $fields;
 	}
