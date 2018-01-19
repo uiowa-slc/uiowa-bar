@@ -21,10 +21,10 @@
 						<% end_if %>
 					</ul>
 					<% if $SiteConfig.EnableSearch %>
-						<form class="uiowa-bar__search-form uiowa-bar__search-google-appliance-search-form" aria-label="site search" role="form" action="https://search.uiowa.edu/search" method="get" id="uiowa-bar__search-form" accept-charset="UTF-8">
+						<form class="uiowa-bar__search-form uiowa-bar__search-google-appliance-search-form" aria-label="site search" role="form" action="{$BaseURL}home/SearchForm" method="get" id="uiowa-bar__search-form" accept-charset="UTF-8">
 							<div class="uiowa-bar__form-container">
 								<label class="uiowa-bar__sr-only" for="uiowa-bar__search-input">Search </label>
-								<input placeholder="Search this site" id="uiowa-bar__search-input" class="uiowa-bar__search-input" type="text" id="q" name="q" value="" size="15" maxlength="256">
+								<input placeholder="Search this site" id="uiowa-bar__search-input" class="uiowa-bar__search-input" type="text" name="Search" value="" size="15" maxlength="256">
 								<input type="submit" value="Search" class="uiowa-bar__submit">
 							</div>
 						</form>
@@ -34,10 +34,10 @@
 				<div class="uiowa-bar__search">
 
 					<% if $SiteConfig.EnableSearch %>
-						<form class="uiowa-bar__search-form uiowa-bar__search-google-appliance-search-form" aria-label="site search" role="form" action="https://search.uiowa.edu/search" method="get" id="uiowa-bar__search-form" accept-charset="UTF-8">
+						<form class="uiowa-bar__search-form uiowa-bar__search-google-appliance-search-form" aria-label="site search" role="form" action="{$BaseURL}home/SearchForm" method="get" id="uiowa-bar__search-form" accept-charset="UTF-8">
 							<div class="uiowa-bar__form-container">
 								<label class="uiowa-bar__sr-only" for="uiowa-bar__search-input">Search </label>
-								<input placeholder="Search this site" id="uiowa-bar__search-input" class="uiowa-bar__search-input" type="text" id="q" name="q" value="" size="15" maxlength="256">
+								<input placeholder="Search this site" id="uiowa-bar__search-input" class="uiowa-bar__search-input" type="text" name="Search" value="" size="15" maxlength="256">
 								<input type="submit" value="Search" class="uiowa-bar__submit">
 							</div>
 						</form>
