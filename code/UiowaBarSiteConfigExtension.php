@@ -17,7 +17,8 @@ class UiowaBarSiteConfigExtension extends DataExtension {
 	);
 
 	private static $defaults = array(
-
+		'QuickLinkTitleOne' => 'Division of Student Life',
+		'QuickLinkURLOne' => 'https://studentlife.uiowa.edu'
 	);
 
 	public function updateCMSFields(FieldList $fields) {
@@ -33,7 +34,7 @@ class UiowaBarSiteConfigExtension extends DataExtension {
 		$fields->addFieldToTab('Root.Main', new TextField('QuickLinkTitleThree', 'Quick Link Title'));
 		$fields->addFieldToTab('Root.Main', new TextField('QuickLinkURLThree', 'Quick Link URL'));
 
-		$fields->addFieldToTab('Root.Main', new TextField('EnableSearch', 'Enable search?'));
+		$fields->addFieldToTab('Root.Main', new CheckboxField('EnableSearch', 'Enable search?'));
 
 		return $fields;
 	}
