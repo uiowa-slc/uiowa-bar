@@ -1,5 +1,6 @@
 <?php
-
+use SilverStripe\ORM\DataExtension;
+use SilverStripe\Forms\FieldList;
 class UiowaBarSiteConfigExtension extends DataExtension {
 
 	private static $db = array(
