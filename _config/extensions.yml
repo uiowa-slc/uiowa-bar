@@ -1,3 +1,6 @@
 SiteConfig:
   extensions:
     - UiowaBarSiteConfigExtension
+Page:
+  extensions:
+    - UiowaBarAlertPageExtension

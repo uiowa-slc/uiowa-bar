@@ -1,3 +1,4 @@
+<% include UiowaAlert %>
 <div class="uiowa-bar__wrapper">
 		<div class="uiowa-bar" role="region" aria-label="University of Iowa global header">
 			<a href="http://www.uiowa.edu" title="The University of Iowa" class="uiowa-bar__wordmark-link">
