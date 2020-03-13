@@ -2,7 +2,7 @@
 	<% if $UiowaAlert %>
 	<style>
 		.uiowa-alert{
-			background: rgba(0,0,0,0.4);
+			background: rgba(0,0,0,0.8);
 			-webkit-backdrop-filter: blur(30px);
 			backdrop-filter: blur(30px);
 			color: white;
