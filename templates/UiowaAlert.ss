@@ -2,12 +2,16 @@
 	<% if $UiowaAlert %>
 	<style>
 		.uiowa-alert{
-			background: rgba(0,0,0,0.8);
+			background: rgba(0,0,0,0.4);
 			-webkit-backdrop-filter: blur(30px);
 			backdrop-filter: blur(30px);
 			color: white;
 			padding: 5px 0;
 			text-align: center;
+		}
+
+		.uiowa-alert--light-header{
+			background: rgba(0,0,0,0.8);
 		}
 
 		.uiowa-alert p{
@@ -20,7 +24,7 @@
 
 	</style>
 
-	<div class="uiowa-alert">
+	<div class="uiowa-alert <% if $DarkLightHeader %>uiowa-alert--{$DarkLightHeader}<% end_if %>">
 		$UiowaAlert.RAW
 	</div>
 
