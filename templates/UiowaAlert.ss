@@ -19,7 +19,7 @@
 		}
 
 		.uiowa-alert a{
-			color: #d9ae00
+			color: #ffcd00
 		}
 
 	</style>
