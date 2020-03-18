@@ -3,7 +3,7 @@
 		<% if $UiowaAlert %>
 		<style>
 			.uiowa-alert{
-				background: rgba(0,0,0,0.4);
+				background: rgba(0,0,0,0.8);
 				-webkit-backdrop-filter: blur(30px);
 				backdrop-filter: blur(30px);
 				color: white;
@@ -11,8 +11,8 @@
 				text-align: center;
 			}
 
-			.uiowa-alert--light-header{
-				background: rgba(0,0,0,0.8);
+			.uiowa-alert--dark-header{
+				background: rgba(0,0,0,0.4);
 			}
 
 			.uiowa-alert p{
