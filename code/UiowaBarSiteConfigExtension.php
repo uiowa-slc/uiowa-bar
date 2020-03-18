@@ -1,6 +1,9 @@
 <?php
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\CheckboxField;
+
 class UiowaBarSiteConfigExtension extends DataExtension {
 
 	private static $db = array(
@@ -10,7 +13,8 @@ class UiowaBarSiteConfigExtension extends DataExtension {
 		'QuickLinkURLOne' => 'Text',
 		'QuickLinkURLTwo' => 'Text',
 		'QuickLinkURLThree' => 'Text',
-		'EnableSearch' => 'Boolean'
+		'EnableSearch' => 'Boolean',
+		'DisableAlert' => 'Boolean'
 	);
 
 	private static $has_one = array(
@@ -25,7 +29,6 @@ class UiowaBarSiteConfigExtension extends DataExtension {
 	public function updateCMSFields(FieldList $fields) {
 
 
-		$fields->addFieldToTab("Root.Main", new HeaderField( '<br><h3>Header Quick Links</h3>', '3', true ) );
 		$fields->addFieldToTab('Root.Main', new TextField('QuickLinkTitleOne', 'Quick Link Title'));
 		$fields->addFieldToTab('Root.Main', new TextField('QuickLinkURLOne', 'Quick Link URL'));
 
@@ -36,8 +39,9 @@ class UiowaBarSiteConfigExtension extends DataExtension {
 		$fields->addFieldToTab('Root.Main', new TextField('QuickLinkURLThree', 'Quick Link URL'));
 
 		$fields->addFieldToTab('Root.Main', new CheckboxField('EnableSearch', 'Enable search?'));
+		$fields->addFieldToTab('Root.Main', new CheckboxField('DisableAlert', 'Disable Alert in UiowaBar'));
 
 		return $fields;
 	}
-
+	
 }
