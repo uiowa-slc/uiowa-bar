@@ -1,5 +1,28 @@
-<% include UiowaAlert %>
-<div class="uiowa-bar__wrapper">
+
+<div id="uiowa-bar--wrapper" class="uiowa-bar--wrapper container-fluid" role="region" aria-label="University of Iowa global header" >
+    <% include UiowaWordmark %>
+  <% include UiowaAlert %>
+  <div id="uiowa-search" class="uiowa-bar--navbar d-flex align-items-center mt-2 mt-sm-0">
+    <ul class="uiowa-bar--navbar--links d-inline-flex px-0 mx-1">
+    	<li class="mx-2"><a href="$QuickLinkURLOne">Quick Link One</a></li>
+    	<li class="mx-2"><a href="$QuickLinkURLTwo">Quick Link Two</a></li>
+<%--         <% if $SiteConfig.QuickLinkTitleOne && $SiteConfig.QuickLinkURLOne %>
+            <li class="mx-2"><a href="$QuickLinkURLOne">$QuickLinkTitleOne</a></li>
+        <% end_if %>
+        <% if $SiteConfig.QuickLinkTitleTwo && $SiteConfig.QuickLinkURLTwo %>
+        	<li class="mx-2"><a href="$QuickLinkURLTwo">$QuickLinkTitleTwo</a></li>
+        <% end_if %> --%>
+    </ul>
+
+<%--     {% if config.display_search %}
+      {{ search_form }}
+    {% endif %} --%>
+  </div>
+
+</div>
+
+
+<%-- <div class="uiowa-bar__wrapper">
 		<div class="uiowa-bar" role="region" aria-label="University of Iowa global header">
 			<a href="http://www.uiowa.edu" title="The University of Iowa" class="uiowa-bar__wordmark-link">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 328.7 40.3"  class="uiowa-bar__wordmark">
@@ -49,3 +72,4 @@
 
 		</div>
 	</div>
+ --%>

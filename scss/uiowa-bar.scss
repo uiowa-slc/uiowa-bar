@@ -1,181 +1,76 @@
-$black: #000;
-$yellow: #FFCD00;
-
-.uiowa-bar__sr-only{
-  clip: rect(1px, 1px, 1px, 1px); 
-   height: 1px; 
-   width: 1px; 
-   overflow: hidden; 
-   position: absolute !important;
-}
-
-.uiowa-bar{
-  margin: 0 auto;
-  font-size: 11px;
-  font-family: sans-serif;
-  box-sizing: border-box;
-  padding: 0;
-  width: 100%;
-  position: relative;
-  height: 41px;  
-}
-
-.uiowa-bar__wrapper{
+.uiowa-bar--wrapper {
   background-color: #000;
+  padding: 0.4rem;
+  flex-shrink: 0;
+  flex-wrap: wrap;
 }
 
-.uiowa-bar__link {
-  color: #999999;
-  font-size: 12px;
-  margin: 10px 5px;
-  vertical-align: middle;
-  position: relative;
-  &:after {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 100%;
-    max-width: 50px;
-    background-color: $yellow;
-    opacity: 0;
-    transform: translateY(4px);
-    transition: all 0.125s ease-in;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    display: inline-block;
-    max-width: 100%;
-    visibility: hidden;
-  }
-  &:hover, &:focus {
-  
-  }
-  &:hover:after, &:focus:after {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-  }
-}
-
-.uiowa-bar__wordmark {
-  width: auto;
-  height: 24px;
-  fill: $yellow;
-}
-
-.uiowa-bar__logo--dark-header {
-  fill: $yellow;
-}
-.uiowa-bar__logo--light-header {
-  fill: #000;
-}
-.uiowa-bar__logo--overlay {
-  fill: $yellow;
-}
-
-.uiowa-bar__wordmark-link {
+.uiowa--bar--wordmark {
   display: block;
-  position: absolute;
-  top: 6px;
-  left: 25px;
+  fill: #FFCD00;
+  line-height: 0;
 }
 
-.uiowa-bar__search-form{
-  margin-bottom: 0;
-  margin-top: 0;
-  display: block;
-  text-align: center;
-  @media(min-width: 600px) {
-    display: inline;
+.uiowa--bar--wordmark svg {
+  height: 30px;
+}
+
+.uiowa-bar--navbar--links {
+  list-style: none;
+  margin-bottom: 0.25rem;
+  flex: 0 0 auto;
+}
+@media(min-width: 768px) {
+  .uiowa-bar--navbar--links {
+    margin-left: 1rem;
+    margin-bottom: 0;
   }
 }
 
-.uiowa-bar__form-container{
-  display: block;
-  margin-bottom: 0;
-  margin-top: 0;
-  @media(min-width: 600px) {
-    display: inline;
-  }
-}
-
-
-
-
-.uiowa-bar__search {
-  
-  position: absolute;
-  top: 6px;
-  right: 25px;
-
-  @media(min-width: 600px) {
-    margin-top: 3px;
-  }
-}
-
-
-.uiowa-bar__menu-item{
-  display: inline;
-  text-align: center;
-  margin: 0 auto;
-  line-height: 24px;
-}
-.uiowa-bar__links {
-  display: inline;
-}
-
-.uiowa-bar__links--overlay a {
+.uiowa-bar--navbar--links > li > a {
   color: #fff;
+  font-size: 0.875rem;
 }
 
-
-
-input[type="text"].uiowa-bar__search-input{
-  border-radius: 0;
-  height: auto;
-  padding: 4px;
-  border-width: 0px;
-  font-size: 1.1em;
-  background-color: #222;
-  display: inline;
-  width: 120px;
-  color: #FFF;
+.uiowa-bar--navbar--search-form {
+  flex: 0 0 auto;
+  width: 250px;
 }
 
-input[type="submit"].uiowa-bar__submit{
-  border: none;
-  line-height: normal;
-  margin-left: -3px;
-  padding: 4px 10px;
-  font-size: 1.1em;
-  font-weight: normal;
-  vertical-align: top;
-  background-color: #999999;
-  border-radius: 0;
-  color: #000;
-  display: inline-block;
-}
-
-
-
-@media(max-width: 600px) {
-  .uiowa-bar{
-   height: inherit;
-  }
-  .uiowa-bar__wordmark-link {
-   display: block;
-   text-align: center;
-   position: static;
-   padding-bottom: 5px;
-  }
-
-  .uiowa-bar__search {
-   position: static;
+@media(min-width: 500px) {
+  .uiowa-bar--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
-@media(max-width: 600px) {
-  .uiowa-bar__links {
-   display: none;
+#uiowa-search {
+  flex-direction: column;
+}
+@media(min-width: 768px) {
+  #uiowa-search {
+    flex-direction: row;
   }
+}
+#uiowa-search fieldset.form-item-search-terms {
+  position: relative;
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 0;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 66.66667%;
+  flex: 0 0 66.66667%;
+  max-width: 66.66667%;
+}
+#uiowa-search input.form-submit {
+  position: relative;
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33.33333%;
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
 }
