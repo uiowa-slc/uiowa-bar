@@ -7,8 +7,12 @@
         <div id="uiowa-search">
             <% if $SiteConfig.QuickLinkURLOne || $SiteConfig.QuickLinkURLTwo %>
             <ul class="links">
-                <li class="0 first"><a href="$SiteConfig.QuickLinkURLOne">$SiteConfig.QuickLinkTitleOne</a></li>
+                <% if $SiteConfig.QuickLinkURLOne  %>
+                <li class="0 first <% if not $SiteConfig.QuickLinkURLTwo  %>last<% end_if %>"><a href="$SiteConfig.QuickLinkURLOne">$SiteConfig.QuickLinkTitleOne</a></li>
+                <% end_if %>
+                <% if $SiteConfig.QuickLinkURLTwo  %>
                 <li class="1 last"><a href="$SiteConfig.QuickLinkURLTwo">$SiteConfig.QuickLinkTitleTwo</a></li>
+                <% end_if %>
             </ul>
             <% end_if %>
             <% if $SiteConfig.EnableSearch %>
