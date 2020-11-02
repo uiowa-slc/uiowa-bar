@@ -11,10 +11,6 @@
 				text-align: center;
 			}
 
-			.uiowa-alert--dark-header{
-				background: rgba(0,0,0,0.4);
-			}
-
 			.uiowa-alert p{
 				margin: 0;
 			}
