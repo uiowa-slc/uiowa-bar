@@ -11,10 +11,6 @@
 				text-align: center;
 			}
 
-			.uiowa-alert--dark-header{
-				background: rgba(0,0,0,0.4);
-			}
-
 			.uiowa-alert p{
 				margin: 0;
 			}
@@ -25,7 +21,7 @@
 
 		</style>
 
-		<div class="uiowa-alert <% if $DarkLightHeader %>uiowa-alert--{$DarkLightHeader}<% end_if %>">
+		<div class="uiowa-alert">
 			$UiowaAlert.RAW
 		</div>
 
