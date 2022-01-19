@@ -20,9 +20,9 @@
                 <div>
                     <div class="form-item form-type-textfield form-item-search-terms">
                         <label for="edit-search-terms">Search </label>
-                        <input placeholder="Search this site" aria-label="Search Box" type="text" id="edit-search-terms" name="search-terms" value="" size="15" maxlength="256" class="form-text">
+                        <input placeholder="Search this site" aria-label="Search Box" type="text" id="edit-search-terms" name="Search" value="" size="15" maxlength="256" class="form-text">
                     </div>
-                    <input type="submit" id="edit-submit-search" name="btnG" value="Search" class="form-submit">
+                    <input type="submit" id="edit-submit-search" name="action_results" value="Search" class="form-submit">
                 </div>
             </form>
             <% end_if %>
